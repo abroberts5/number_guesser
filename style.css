@@ -1,0 +1,40 @@
+body {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 50px;
+  padding: 18px 0px 18px 0px;
+  margin: 0px 0px 0px 0px;
+  color: rgb(253,18,116);
+  background-color: black;
+}
+
+h4 {
+  margin: 0;
+}
+
+button {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 200;
+  border-radius: 30px;
+  background-color: rgb(146,148,151);
+  margin:24px;
+  height: 48px;
+  width: 160px;
+}
+
+button:disabled {
+  background-color: rgb(185,185,185);
+}
+
+button:hover {
+  background-color: rgb(253,18,116);
+}
