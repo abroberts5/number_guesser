@@ -5,7 +5,8 @@ var submit = document.querySelector('.submit')
 var clear = document.querySelector('.clear')
 var reset = document.querySelector('.reset')
 var updateRange = document.querySelector('.change-range')
-
+// create variables to event listener when user clicks on page, put at the top
+// to show how it will be used throughout the code.
 
 submit.addEventListener('click', submitGuess)
 clear.addEventListener('click', clearField)
@@ -14,8 +15,7 @@ updateRange.addEventListener('click',editRange)
 function randomNumber(max, min) {
   return Math.floor(Math.random() * max) + min
 }
-
-
+// use random function to choose number between variable floor min and max
 
 function submitGuess() {
   var guess = document.querySelector('.guess').value;
@@ -23,10 +23,12 @@ function submitGuess() {
   clear.removeAttribute('disabled', true);
   feedback()
 }
+// identify user input from guess class and change background color, returns feedback function
 
 function clearField() {
   document.querySelector('.guess').value = ' ';
 }
+// resets the field back to blank response
 
 function feedback(){
   var guess = document.querySelector('.guess').value
@@ -49,6 +51,9 @@ function feedback(){
     document.querySelector('.feedback').innerHTML = "invalid input"
   }
 }
+// used "if" statements to respond to user input, seems like the best way to
+// respond dynamically to input and reset if incorrect guess. Using ES5 functions
+// because it's more readable.
 
 function editRange(){
   var newMax = document.querySelector('.new-max').value
@@ -60,6 +65,7 @@ function editRange(){
     min = newMin
   }
 }
+// part 3 of the instructions to set new max and min if response recorded correctly
 
 function levelUp(){
   max = max +10;
@@ -67,3 +73,4 @@ function levelUp(){
   anwser = randomNumber(max, min);
   document.querySelector('.level-up').innerHTML = "You have guessed correct. The range has increased by 10 on each side of the range. "
 }
+// function used at the end of correct statement
